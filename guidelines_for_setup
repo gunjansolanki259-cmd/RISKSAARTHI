@@ -1,0 +1,75 @@
+RISKSAARTHI – Setup Instructions for First-Time Users
+
+
+1. Environment Configuration (.env File)
+This project requires a .env file for database and security configuration. Since it is not included, create it manually in the root directory.
+Create a file named .env and add the following:
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=risksaarthi
+IDENTITY_SALT=your_secret_salt
+
+
+Replace:
+
+your_password → your MySQL password
+your_secret_salt → any random secure string (used for hashing identity data)
+
+
+
+2. Database Setup (MySQL)
+
+Follow these steps to initialize the database:
+
+Open MySQL (Workbench / CLI)
+Execute SQL files in the correct order:
+
+Step 1: Run schemas.sql
+
+Creates database
+Creates all tables
+
+Step 2: Run indexes.sql
+
+Creates indexes for performance
+
+These files already contain all required commands (DB + tables + indexes).
+
+
+
+3. Project Execution Order
+
+Run the following files in sequence:
+
+Step 1: Generate Dataset
+python generate_synthetic_data.py
+
+
+Step 2: Exploratory Data Analysis (Optional)
+ml/notebooks/eda.ipynb
+
+
+Step 3: Train Model
+python train.py
+
+
+Step 4: Evaluate Model
+python evaluate.py
+
+
+Step 5: View Sample Data
+python raw_data_sample.py
+
+
+
+4. Important Notes
+
+- Ensure MySQL server is running
+
+- Install dependencies:
+  pip install -r requirements.txt
+
+Recommended Python version: 3.8+
+.env file must be correctly configured before running scripts

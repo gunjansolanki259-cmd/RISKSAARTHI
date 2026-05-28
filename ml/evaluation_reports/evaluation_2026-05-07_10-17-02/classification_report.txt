@@ -1,0 +1,13 @@
+Model ID : loan_model_v1
+Accuracy : 0.6492
+ROC-AUC  : 0.7649
+F1 Score : 0.3206
+
+              precision    recall  f1-score   support
+
+           0       0.96      0.63      0.76    537390
+           1       0.20      0.79      0.32     62610
+
+    accuracy                           0.65    600000
+   macro avg       0.58      0.71      0.54    600000
+weighted avg       0.88      0.65      0.72    600000

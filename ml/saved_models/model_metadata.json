@@ -1,0 +1,8 @@
+{
+    "current_model": "loan_model_v1.pkl",
+    "algorithm": "RandomForest",
+    "training_date": "2026-05-07",
+    "accuracy": 0.6473,
+    "roc_auc": 0.7596,
+    "f1_score": 0.3177
+}
